@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "appRetoMagister"
+  "defaultProject": "appRetoMagister",
+  "cli": {
+    "analytics": false
+  }
 }
