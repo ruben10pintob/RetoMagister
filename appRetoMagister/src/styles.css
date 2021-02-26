@@ -1,6 +1,9 @@
 /*CSS PARA COMPONENTE HOME*/
 
-body {
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
     background-color: #193868;
     color: #fff;
 }
@@ -154,3 +157,114 @@ body {
         margin-right: 33%;
     }
   }
+
+    /* COMPONENTE ASIDE  */
+
+.container-aside {
+    height: 100%; 
+    background-color: #193868;
+}
+
+.content-aside {
+    padding: 30px 10px 0 10px;
+}
+
+.icon-magister-aside{
+    font-size: 60px;
+    margin-right: 20px;
+}
+
+.title-aside {
+    margin-top: 40px;
+    font-size: 35px;
+}
+
+.links-aside {
+    margin-left: 35px;
+    margin-top: 60px;
+    font-size: 20px;
+}
+
+.links-aside p {
+    margin-top: 22px;
+}
+
+#icon-active {
+    color: #fff;
+}
+
+#icon-default {
+    color: #577294;
+}
+
+/*  MEDIA QUERY ASIDE  */
+
+@media screen and (max-width: 890px) {
+
+    .title-aside {
+        margin-top: 38px;
+        font-size: 30px;
+    }
+
+    .icon-magister-aside{
+        font-size: 30px;
+        margin-right: 19px;
+    }
+
+    .links-aside {
+        margin-left: 30px;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 756px) {
+
+    .title-aside {
+        margin-top: 35px;
+        font-size: 28px;
+    }
+
+    .icon-magister-aside{
+        display: none;
+    }
+
+    .links-aside {
+        margin-left: 28px;
+        margin-top: 45px;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .title-aside {
+        margin-top: 35px;
+        font-size: 25px;
+    }
+
+    .links-aside {
+        margin-left: 16px;
+        margin-top: 45px;
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 489px) {
+
+    .title-aside {
+        margin-top: 35px;
+        font-size: 18px;
+    }
+
+    .links-aside {
+        margin-left: 8px;
+        margin-top: 25px;
+        font-size: 12px;
+    }
+    
+}
+
