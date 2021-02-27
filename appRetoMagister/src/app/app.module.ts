@@ -12,6 +12,8 @@ import { DatosPersonalesComponent } from './components/datos-personales/datos-pe
 import { DireccionComponent } from './components/direccion/direccion.component';
 import { FormasPagoComponent } from './components/formas-pago/formas-pago.component';
 import { AgradecimientosComponent } from './components/agradecimientos/agradecimientos.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,12 @@ import { AgradecimientosComponent } from './components/agradecimientos/agradecim
     DatosPersonalesComponent,
     DireccionComponent,
     FormasPagoComponent,
-    AgradecimientosComponent
+    AgradecimientosComponent,
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
