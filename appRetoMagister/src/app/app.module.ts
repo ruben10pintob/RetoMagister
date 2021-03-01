@@ -32,11 +32,8 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     routing,
-<<<<<<< HEAD
-    FormsModule
-=======
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
->>>>>>> firebase
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
