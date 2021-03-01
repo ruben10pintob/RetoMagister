@@ -274,12 +274,12 @@ html, body {
     height:100%;
 }
 
-.container-component-right {
+.container-component-left {
     width: 28%; 
     height:100%
 }
 
-.container-component-left {
+.container-component-right {
     width: 72%; 
     background-color: #fff;
     color: #193868;
