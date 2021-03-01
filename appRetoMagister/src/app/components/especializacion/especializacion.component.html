@@ -1,11 +1,103 @@
 <div class="container-component">
 
-    <div class="container-component-left"> 
+    <div class="container-component-left">
         <app-aside [linkActive]="'¿En qué te quieres especializar?'"></app-aside>
     </div>
-    
-    <div class="container-component-right"> 
-        <p style="color: blue;">ESPECIALIZACION</p>
-    </div>    
-    
+
+    <div class="container-component-right">
+        
+        <div class="text-right"><i class="fas fa-bars icon-menu-aside-right"></i></div>
+
+        <div class="title-component-right">
+            <h2 class="text-center">¿En qué te quieres especializar?</h2>
+        </div>
+
+        <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+
+            <div class="container-section-form">
+
+                <div style="width: 40%; margin-left: 10%;">
+
+                    <label class="title-input" for="rama"> <b>Rama</b> <br>
+                        <span>(Seleccione una opcion)</span>
+                    </label>
+
+                    <br>
+
+                    <select name="rama" ngModel [(ngModel)]="user.rama">
+                        <option value="" disabled>Ej: Maestros - Audición y lenguage</option>
+                        <option *ngFor="let rama of ramas" [ngValue]="rama">
+                            {{ rama }}
+                    </select>
+
+                </div>
+
+                <div style="width: 40%;">
+
+                    <label class="title-input" for="provincia"> <b>Provincia</b> <br>
+                        <span>(Seleccione una opcion)</span>
+                    </label>
+
+                    <br>
+
+                    <select name="provincia" ngModel [(ngModel)]="user.provincia">
+                        <option value="" disabled>Ej: Madrid</option>
+                        <option *ngFor="let provincia of provincias" [ngValue]="provincia">
+                            {{ provincia }}
+                        </option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="container-section-form">
+
+                <div style="width: 80%; margin-top: 40px; margin-left: 10%;">
+
+                    <label class="title-input"> <b>¿Has sido alumn@ de Magister?</b> <br>
+                        <span class="conditions"> <b>Consulta las condiciones <i class="fas fa-arrow-right"></i></b></span>
+                    </label> 
+
+                    <br>
+
+                    <div class="options">
+                        <input type="radio" name="exalumno" id="exalumno-no" value="No" class="visible" [(ngModel)]="user.exalumno">
+                        <label for="exalumno-no">No</label>
+
+                        <input type="radio" name="exalumno" id="exalumno-si" value="Si" class="visible"[(ngModel)]="user.exalumno">
+                        <label for="exalumno-si">Sí</label>
+
+                        <input type="radio" name="exalumno" id="exalumno-si-2017" value="Si, despues de 2017" class="visible" [(ngModel)]="user.exalumno">
+                        <label for="exalumno-si-2017">Sí, después de 2017</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container-section-form">
+
+                <div style="width: 80%; margin-top: 40px; margin-left: 10%;">
+
+                <label class="title-input"> <b>Entrega de material</b> <br>
+                    <span class="conditions"><b>Consulta las condiciones <i class="fas fa-arrow-right"></i></b></span>
+                </label>
+                
+                <br>
+
+                <input type="radio" name="material" id="material" value="Mes a mes" checked>
+                <label for="material" class="btn-default">Mes a mes</label>
+
+                </div>
+
+            </div>
+
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 40px;">
+
+        </form>
+
+    </div>
+
 </div>
+
