@@ -25,9 +25,9 @@
                     <br>
 
                     <select name="rama" ngModel [(ngModel)]="user.rama">
-                        <option value="" disabled>Ej: Maestros - Audición y lenguage</option>
-                        <option *ngFor="let rama of ramas" [ngValue]="rama">
-                            {{ rama }}
+                        <option value="" disabled selected>Ej: Maestros - Audición y lenguage</option>
+                        <option *ngFor="let rama of ramas.data" [ngValue]="rama.rama">
+                            {{ rama.rama }}
                     </select>
 
                 </div>
@@ -42,8 +42,8 @@
 
                     <select name="provincia" ngModel [(ngModel)]="user.provincia">
                         <option value="" disabled>Ej: Madrid</option>
-                        <option *ngFor="let provincia of provincias" [ngValue]="provincia">
-                            {{ provincia }}
+                        <option *ngFor="let provincia of provincias.data" [ngValue]="provincia.provincia">
+                            {{ provincia.provincia }}
                         </option>
                     </select>
 
