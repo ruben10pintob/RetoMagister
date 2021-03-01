@@ -6,7 +6,7 @@
 
     <div class="container-component-right">
         
-        <div class="text-right"><i class="fas fa-bars icon-menu-aside-"></i></div>
+        <div class="text-right"><i class="fas fa-bars icon-menu-aside-right"></i></div>
 
         <div class="title-component-right">
             <h2 class="text-center">¿En qué te quieres especializar?</h2>
@@ -14,11 +14,11 @@
 
         <form #userForm="ngForm" (ngSubmit)="onSubmit()">
 
-            <div style="display: flex; width: 100%;">
+            <div class="container-section-form">
 
                 <div style="width: 40%; margin-left: 10%;">
 
-                    <label for="rama">Rama <br>
+                    <label class="title-input" for="rama"> <b>Rama</b> <br>
                         <span>(Seleccione una opcion)</span>
                     </label>
 
@@ -34,7 +34,7 @@
 
                 <div style="width: 40%;">
 
-                    <label for="provincia">Provincia <br>
+                    <label class="title-input" for="provincia"> <b>Provincia</b> <br>
                         <span>(Seleccione una opcion)</span>
                     </label>
 
@@ -51,50 +51,53 @@
 
             </div>
 
-            <div style="display: flex; width: 100%;">
+            <div class="container-section-form">
 
                 <div style="width: 80%; margin-top: 40px; margin-left: 10%;">
 
-                    <label>¿Has sido alumn@ de Magister? <br>
-                        <span>Consulta las condiciones <i class="fas fa-arrow-right"></i></span>
+                    <label class="title-input"> <b>¿Has sido alumn@ de Magister?</b> <br>
+                        <span class="conditions"> <b>Consulta las condiciones <i class="fas fa-arrow-right"></i></b></span>
                     </label> 
 
                     <br>
 
-                    <input type="radio" name="exalumno" id="exalumno-no" value="No" class="visible" [(ngModel)]="user.exalumno">
-                    <label for="exalumno-no">No</label>
+                    <div class="options">
+                        <input type="radio" name="exalumno" id="exalumno-no" value="No" class="visible" [(ngModel)]="user.exalumno">
+                        <label for="exalumno-no">No</label>
 
-                    <input type="radio" name="exalumno" id="exalumno-si" value="Si" class="visible"[(ngModel)]="user.exalumno">
-                    <label for="exalumno-si">Sí</label>
+                        <input type="radio" name="exalumno" id="exalumno-si" value="Si" class="visible"[(ngModel)]="user.exalumno">
+                        <label for="exalumno-si">Sí</label>
 
-                    <input type="radio" name="exalumno" id="exalumno-si-2017" value="Si, despues de 2017" class="visible" [(ngModel)]="user.exalumno">
-                    <label for="exalumno-si-2017">Sí, después de 2017</label>
+                        <input type="radio" name="exalumno" id="exalumno-si-2017" value="Si, despues de 2017" class="visible" [(ngModel)]="user.exalumno">
+                        <label for="exalumno-si-2017">Sí, después de 2017</label>
+                    </div>
 
                 </div>
 
             </div>
 
-            <div style="display: flex; width: 100%;">
+            <div class="container-section-form">
 
                 <div style="width: 80%; margin-top: 40px; margin-left: 10%;">
 
-                <label>Entrega de material <br>
-                    <span>Consulta las condiciones <i class="fas fa-arrow-right"></i></span>
+                <label class="title-input"> <b>Entrega de material</b> <br>
+                    <span class="conditions"><b>Consulta las condiciones <i class="fas fa-arrow-right"></i></b></span>
                 </label>
                 
                 <br>
 
-                <input type="radio" name="material" id="material" value="Mes a mes" class="visible" checked>
-                <label for="material">Mes a mes</label>
+                <input type="radio" name="material" id="material" value="Mes a mes" checked>
+                <label for="material" class="btn-default">Mes a mes</label>
 
                 </div>
 
             </div>
 
-            <input type="submit" value="Siguiente" class="btn-home btn-success text-center" style="margin-top: 40px;">
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 40px;">
 
         </form>
 
     </div>
 
 </div>
+
