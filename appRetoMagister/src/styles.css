@@ -1,5 +1,3 @@
-/*CSS PARA COMPONENTE HOME*/
-
 html, body {
     margin: 0px;
     padding: 0px;
@@ -284,4 +282,5 @@ html, body {
 .container-component-left {
     width: 72%; 
     background-color: #fff;
+    color: #193868;
 }
