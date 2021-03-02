@@ -338,7 +338,8 @@ input[type=radio]{
     display: none;
 }
 
-input[type=radio]+label{
+input[type=radio]+label, 
+input[type=text] {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -348,10 +349,13 @@ input[type=radio]+label{
     margin-right: 26px;
 }
 
-input[type=radio].visible:checked+label{
+input[type=radio].visible:checked+label,
+input[type=text].visible:checked{
     background-color: #193868;
     color: #fff;
 }
+
+
 
 .btn-next {
     display: flex;
