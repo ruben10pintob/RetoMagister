@@ -62,4 +62,10 @@ export class HorarioModalidadComponent implements OnInit {
 
   }
 
+  onSubmit() {
+    this.userString = JSON.stringify(this.user);
+    localStorage.setItem('Usuario 2', this.userString);
+    this._router.navigate(['/tarifa']);
+  }
+
 }

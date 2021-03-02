@@ -12,7 +12,7 @@
             <h2 class="text-center">Elige el horario y modalidad que más te acomode</h2>
         </div>
 
-        <form #userForm="ngForm">
+        <form #userForm="ngForm" (ngSubmit)="onSubmit()">
 
             <div class="container-section-form">
 
@@ -22,10 +22,10 @@
                         <span>(Seleccione una opcion)</span>
                     </label>
 
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); width: 100%; margin-top: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); width: 100%; margin-top: 10px;">
 
-                        <div *ngFor="let modalidad of modalidades.data" [ngValue]="modalidad.modalidad" style="width: 100%; margin-right: 10%; margin-top: 20px">
-                            <input type="radio" name="modalidad" id="{{modalidad.modalidad}}" value="No" class="visible">
+                        <div *ngFor="let modalidad of modalidades.data" [ngValue]="modalidad.modalidad" style="width: 100%; margin-right: 10%; margin-top: 10px">
+                            <input type="radio" name="modalidad" id="{{modalidad.modalidad}}" value="{{modalidad.modalidad}}" class="visible" [(ngModel)]="user.modalidad">
                             <label for="{{modalidad.modalidad}}">{{modalidad.modalidad}}</label>
                         </div>
 
@@ -45,10 +45,10 @@
                             <span>(Seleccione una opcion)</span>
                         </label>
     
-                        <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 20px;">
+                        <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 10px;">
 
-                            <div *ngFor="let horario of horarios.data" [ngValue]="horario.horario" style="width: 100%; margin-right: 10%; margin-top: 20px">
-                                <input type="radio" name="horario" id="{{horario.horario}}" value="No" class="visible">
+                            <div *ngFor="let horario of horarios.data" [ngValue]="horario.horario" style="width: 100%; margin-right: 10%; margin-top: 10px">
+                                <input type="radio" name="horario" id="{{horario.horario}}" value="{{horario.horario}}" class="visible" [(ngModel)]="user.horario">
                                 <label for="{{horario.horario}}">{{horario.horario}}</label>
                             </div>
                         
@@ -60,7 +60,7 @@
 
             </div>
 
-            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 40px;">
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 30px;">
             <a href="#" class="btn-home btn-back text-center">Volver atras</a>
 
         </form>
