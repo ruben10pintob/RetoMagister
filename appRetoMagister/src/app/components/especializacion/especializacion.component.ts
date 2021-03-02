@@ -14,19 +14,21 @@ export class EspecializacionComponent implements OnInit {
   public user: User;
   public userString: string;
   
-  public ramas = { count: 0, data: [] }
-  public provincias = { count: 0, data: [] }
+  public ramas: any;
+  public provincias: any;
 
   constructor(
     private _router: Router,
     private firebaseService: FirebaseServiceService,
   ) { 
     this.user = new User('','','','','','','','','','','','','','','','');
+    this.ramas = { count: 0, data: [] };
+    this.provincias = { count: 0, data: [] }
   }
 
   ngOnInit(): void {
 
-    // LISTAR EN EL SELECT LAS RAMAS DESDE FIREBASE
+    // OBTENER LAS RAMAS DESDE FIREBASE
 
     this.firebaseService.getRamas().subscribe( resp => {
 
@@ -43,7 +45,7 @@ export class EspecializacionComponent implements OnInit {
       }
     );
 
-    // LISTAR EN EL SELECT LAS PROVINCIAS DESDE FIREBASE
+    // OBTENER LAS PROVINCIAS DESDE FIREBASE
 
     this.firebaseService.getProvincias().subscribe( resp => {
 
