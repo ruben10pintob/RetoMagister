@@ -4,8 +4,67 @@
         <app-aside [linkActive]="'Horario y Modalidad'"></app-aside>
     </div>
     
-    <div class="container-component-right"> 
-        <p style="color: blue;">HORARIO</p>
-    </div>    
+    <div class="container-component-right">
+        
+        <div class="text-right"><i class="fas fa-bars icon-menu-aside-right"></i></div>
+
+        <div class="title-component-right">
+            <h2 class="text-center">Elige el horario y modalidad que más te acomode</h2>
+        </div>
+
+        <form #userForm="ngForm">
+
+            <div class="container-section-form">
+
+                <div style="width: 100%; margin-left: 10%;">
+
+                    <label class="title-input" for="modalidad"> <b>Modalidad</b> <br>
+                        <span>(Seleccione una opcion)</span>
+                    </label>
+
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); width: 100%; margin-top: 20px;">
+
+                        <div *ngFor="let modalidad of modalidades.data" [ngValue]="modalidad.modalidad" style="width: 100%; margin-right: 10%; margin-top: 20px">
+                            <input type="radio" name="modalidad" id="{{modalidad.modalidad}}" value="No" class="visible">
+                            <label for="{{modalidad.modalidad}}">{{modalidad.modalidad}}</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container-section-form">
+
+                <div class="container-section-form">
+
+                    <div style="width: 100%; margin-left: 10%;">
+    
+                        <label class="title-input" for="horario"> <b>Horario</b> <br>
+                            <span>(Seleccione una opcion)</span>
+                        </label>
+    
+                        <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 20px;">
+
+                            <div *ngFor="let horario of horarios.data" [ngValue]="horario.horario" style="width: 100%; margin-right: 10%; margin-top: 20px">
+                                <input type="radio" name="horario" id="{{horario.horario}}" value="No" class="visible">
+                                <label for="{{horario.horario}}">{{horario.horario}}</label>
+                            </div>
+                        
+                        </div>
+    
+                    </div>
+    
+                </div>
+
+            </div>
+
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 40px;">
+            <a href="#" class="btn-home btn-back text-center">Volver atras</a>
+
+        </form>
+
+    </div>  
     
 </div>
