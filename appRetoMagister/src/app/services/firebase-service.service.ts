@@ -30,4 +30,8 @@ export class FirebaseServiceService {
   getTarifas() {
     return this.firestore.collection('tarifas').snapshotChanges();
   }
+
+  getComunidad() {
+    return this.firestore.collection('comunidades').snapshotChanges();
+  }
 }
