@@ -26,4 +26,8 @@ export class FirebaseServiceService {
   getModalidades() {
     return this.firestore.collection('modalidades').snapshotChanges();
   }
+
+  getTarifas() {
+    return this.firestore.collection('tarifas').snapshotChanges();
+  }
 }
