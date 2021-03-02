@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-datos-personales',
@@ -8,14 +9,22 @@ import { User } from '../../models/user';
 })
 export class DatosPersonalesComponent implements OnInit {
 
-  public user: User;
+public user: User;
+  public userString: string;
 
   constructor(
+    private _router: Router
   ) { 
     this.user = new User('','','','','','','','','','','','','','','','');
   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.userString = JSON.stringify(this.user);
+    localStorage.setItem('Usuario 4', this.userString);
+    this._router.navigate(['/direccion']);
   }
 
 }

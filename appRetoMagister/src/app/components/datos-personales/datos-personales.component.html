@@ -12,7 +12,7 @@
             <h2 class="text-center">Tus datos personales</h2>
         </div>
 
-        <form #userForm="ngForm">
+        <form #userForm="ngForm" (ngSubmit)="onSubmit()">
 
             <div class="container-section-form">
 
@@ -25,7 +25,7 @@
                     <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 10px;">
 
                         <div style="width: 100%; margin-right: 10%; margin-top: 10px">
-                            <input type="text" name="nombre" id="nombre" placeholder="Ej: Camila Pérez Sánchez" class="visible">
+                            <input type="text" name="nombre" id="nombre" placeholder="Ej: Camila Pérez Sánchez" class="visible" [(ngModel)]="user.nombre">
                         </div>
 
                     </div>
@@ -44,17 +44,17 @@
 
                             <div style="width: 100%; margin-right: 10%;">
                                 <label class="title-input" for="dni"> <b>DNI-NIE</b> <br></label>
-                                <input type="text" name="dni" id="dni" placeholder="Ej: 51823366M" class="visible" style="margin-top: 10px">
+                                <input type="text" name="dni" id="dni" placeholder="Ej: 51823366M" class="visible" style="margin-top: 10px" [(ngModel)]="user.DNI">
                             </div>
 
                             <div style="width: 100%;">
                                 <label class="title-input" for="movil"> <b>Móvil</b> <br></label>
-                                <input type="text" name="movil" id="movil" placeholder="Ej: 613266378" class="visible" style="margin-top: 10px">
+                                <input type="text" name="movil" id="movil" placeholder="Ej: 613266378" class="visible" style="margin-top: 10px" [(ngModel)]="user.movil">
                             </div>
 
                             <div style="width: 100%; margin-right: 10%;">
                                 <label class="title-input" for="email"> <b>Email</b> <br></label>
-                                <input type="text" name="email" id="email" placeholder="Ej: camila@gmail.com" class="visible" style="margin-top: 10px">
+                                <input type="text" name="email" id="email" placeholder="Ej: camila@gmail.com" class="visible" style="margin-top: 10px" [(ngModel)]="user.email">
                             </div>
                         
                         </div>
