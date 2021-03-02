@@ -1,11 +1,56 @@
 <div class="container-component">
 
     <div class="container-component-left"> 
-      <app-aside [linkActive]="'Tarifa'"></app-aside>
+        <app-aside [linkActive]="'Tarifa'"></app-aside>
     </div>
     
-    <div class="container-component-right"> 
-        <p style="color: blue;">TARIFA</p>
-    </div>    
+    <div class="container-component-right">
+        
+        <div class="text-right"><i class="fas fa-bars icon-menu-aside-right"></i></div>
+
+        <div class="title-component-right">
+            <h2 class="text-center">Seleccion tú tarifa</h2>
+        </div>
+
+        <form #userForm="ngForm">
+
+
+                <div class="container-section-form">
+
+                    <div style="width: 100%; margin-left: 10%;">
+    
+                        <label class="title-input" for="horario"> <b>Tarifa</b> <br>
+                            <span>(Seleccione una opcion)</span>
+                        </label>
+    
+                        <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 10px;">
+
+                            <div style="width: 100%; margin-right: 10%; margin-top: 10px">
+                                <input type="radio" name="horario" id="horario" value="horario" class="visible">
+                                <label for="horario">horario</label>
+                            </div>
+
+                            <div style="width: 100%; margin-right: 10%; margin-top: 10px">
+                                <input type="radio" name="horario" id="horario" value="horario" class="visible">
+                                <label for="horario">horario</label>
+                            </div>
+
+                            <div style="width: 100%; margin-right: 10%; margin-top: 10px">
+                                <input type="radio" name="horario" id="horario" value="horario" class="visible">
+                                <label for="horario">horario</label>
+                            </div>
+                        
+                        </div>
+    
+                    </div>
+    
+                </div>
+
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 30px;">
+            <a href="#" class="btn-home btn-back text-center">Volver atras</a>
+
+        </form>
+
+    </div>  
     
 </div>
