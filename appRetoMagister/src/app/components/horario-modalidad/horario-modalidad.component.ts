@@ -15,7 +15,7 @@ export class HorarioModalidadComponent implements OnInit {
   public userString: string;
 
   public modalidades: any; 
-  public horarios = { count: 0, data: [] }
+  public horarios: any;
 
   constructor(
     private _router: Router,
