@@ -3,7 +3,6 @@ import { User } from '../../models/user';
 import { Router } from '@angular/router';
 
 import { FirebaseServiceService } from '../../services/firebase-service.service';
-import { element } from 'protractor';
 
 @Component({
   selector: 'app-horario-modalidad',
