@@ -20,6 +20,13 @@ html, body {
     text-align: right;
 }
 
+/* CSS PARA LOS ENLACES*/
+
+a {
+    color: #6cd6fd;
+    text-decoration: none;
+}
+
 /*CSS GLOBALES PARA LOS ICONOS*/
 
 .icon-menu {
@@ -339,7 +346,8 @@ input[type=radio]{
 }
 
 input[type=radio]+label, 
-input[type=text] {
+input[type=text],
+input[type=checkbox] {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
