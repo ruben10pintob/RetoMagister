@@ -5,7 +5,7 @@ export class User {
         public direccion: string,
         public localidad: string,
         public provinciaUsuario: string,
-        public codidoPostal: string,
+        public codigoPostal: string,
         
         
     ){}
