@@ -40,6 +40,32 @@ a {
     margin-right: 20px;
 }
 
+/**/
+
+/* CSS PARA MARGIN*/
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-top-button-submit {
+    margin-top: 30px;
+}
+
+/**/
+
 .title {
     margin-top: 75px;
     font-size: 50px;
@@ -98,8 +124,6 @@ a {
     border-radius: 12px;
     font-size: 20px;
 }
-
-/*   MEDIA QUERY HOME    */
 
 @media screen and (max-width: 765px) {
 
@@ -163,8 +187,6 @@ a {
     }
   }
 
-    /* COMPONENTE ASIDE  */
-
 .container-aside {
     height: 100%; 
     background-color: #193868;
@@ -201,8 +223,6 @@ a {
 #icon-default {
     color: #577294;
 }
-
-/*  MEDIA QUERY ASIDE  */
 
 @media screen and (max-width: 890px) {
 
@@ -552,25 +572,11 @@ input[type=text].visible:checked{
     margin-top: 10px;
 }
 
-.margin-top-5 {
-    margin-top: 5px;
+.input-datos,
+.input-direccion {
+    width: 60%;
 }
 
-.margin-top-10 {
-    margin-top: 10px;
-}
-
-.margin-bottom-5 {
-    margin-bottom: 5px;
-}
-
-.margin-bottom-10 {
-    margin-bottom: 10px;
-}
-
-.margin-top-button-submit {
-    margin-top: 30px;
-}
 
 @media screen and (max-width: 1049px) {
     app-horario-modalidad {
@@ -584,7 +590,3 @@ input[type=text].visible:checked{
     }
 }
 
-.input-datos,
-.input-direccion {
-    width: 60%;
-}
