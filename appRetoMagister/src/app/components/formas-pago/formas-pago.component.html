@@ -4,8 +4,73 @@
         <app-aside [linkActive]="'Forma de pago'"></app-aside>
     </div>
     
-    <div class="container-component-right"> 
-        <p style="color: blue;">FORMAS DE PAGO</p>
-    </div>    
+    <div class="container-component-right">
+        
+        <div class="text-right"><i class="fas fa-bars icon-menu-aside-right"></i></div>
+
+        <div class="title-component-right">
+            <h2 class="text-center">Forma de pago</h2>
+        </div>
+
+        <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+
+            <div class="container-section-form">
+
+                <div style="width: 100%; margin-left: 10%;">
+
+                    <label class="title-input" for="modalidad"> <b>Como prefieres abonar tu primer pago</b> <br>
+                        
+                    </label>
+
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); width: 100%; margin-top: 10px;">
+
+                     
+
+                            <div style="width: 100%; margin-right: 10%;">
+                                <input type="radio" name="forma-pago" id="forma-pago-tarjeta" value="Tarjeta de crédito / débito (recomendado)" class="visible" [(ngModel)]="user.formaPago">
+                                <label for="forma-pago-tarjeta">Tarjeta de crédito / débito (recomendado)</label>
+                            </div>
+
+                            <div style="width: 100%;">
+                                <input type="radio" name="forma-pago" id="forma-pago-transferencia" value="Transferencia bancaria" class="visible" [(ngModel)]="user.formaPago">
+                                <label for="forma-pago-transferencia">Transferencia bancaria</label>
+                            </div>
+                       
+
+                    </div>
+
+                    <span class="conditions"> <b> Detalles sobre forma de pago y proceso post pago <i class="fas fa-arrow-right"></i></b></span>
+
+                </div>
+
+            </div>
+
+            <div style="width: 80%; margin-top: 40px; margin-left: 10%;">
+
+                <label class="title-input"> <b>¿Vienes recomendado por alguien?</b> <br> </label> 
+
+                <br>
+
+                <div class="options">
+
+                    <input type="radio" name="recomendacion" id="recomendado-no" value="No" class="visible" [(ngModel)]="user.recomendado">
+                    <label for="recomendado-no">No</label>
+
+                    <input type="radio" name="recomendacion" id="recomendado-si" value="Si" class="visible"[(ngModel)]="user.recomendado">
+                    <label for="recomendado-si">Sí</label>
+
+                </div>
+
+                <span class="conditions"> <b> Ver información legal <i class="fas fa-arrow-right"></i></b></span>
+
+            </div>            
+
+
+            <input type="submit" value="Enviar" class="btn-next btn-success text-center" style="margin-top: 30px;">
+            <a href="#" class="btn-home btn-back text-center">Volver atras</a>
+
+        </form>
+
+    </div>         
     
 </div>

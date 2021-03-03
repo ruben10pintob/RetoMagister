@@ -12,7 +12,7 @@ export class FormasPagoComponent implements OnInit {
 
   constructor(
   ) { 
-    this.user = new User('','','','','','','','','','','','','','','','');
+    this.user = new User('','');
   }
 
   ngOnInit(): void {
