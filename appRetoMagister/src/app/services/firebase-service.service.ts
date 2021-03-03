@@ -34,4 +34,8 @@ export class FirebaseServiceService {
   getComunidad() {
     return this.firestore.collection('comunidades').snapshotChanges();
   }
+
+  createUser(user:any){
+    return this.firestore.collection("matriculas").add(user);
+  }
 }
