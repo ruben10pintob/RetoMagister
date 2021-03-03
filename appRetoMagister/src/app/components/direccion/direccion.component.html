@@ -45,7 +45,7 @@
 
                         <div style="width: 100%; margin-right: 10%;">
                             <label class="title-input" for="direccion"> <b>Dirección</b> <br></label>
-                            <input type="text" name="direccion" id="direccion" placeholder="Ej: Calle Ramiro de Matxu, 10, 4D" class="visible" style="margin-top: 10px">
+                            <input type="text" name="direccion" id="direccion" placeholder="Ej: Calle Ramiro de Matxu, 10, 4D" class="visible" style="margin-top: 10px" [(ngModel)]="user.direccion">
                         </div>
                         
                     </div>
@@ -64,17 +64,17 @@
 
                             <div style="width: 100%; margin-right: 10%;">
                                 <label class="title-input" for="localidad"> <b>Localidad</b> <br></label>
-                                <input type="text" name="localidad" id="localidad" placeholder="Ej: Madrid" class="visible" style="margin-top: 10px">
+                                <input type="text" name="localidad" id="localidad" placeholder="Ej: Madrid" class="visible" style="margin-top: 10px" [(ngModel)]="user.localidad">
                             </div>
 
                             <div style="width: 100%;">
                                 <label class="title-input" for="provincia"> <b>Provincia</b> <br></label>
-                                <input type="text" name="provincia" id="provincia" placeholder="Ej: Madrid" class="visible" style="margin-top: 10px">
+                                <input type="text" name="provincia" id="provincia" placeholder="Ej: Madrid" class="visible" style="margin-top: 10px" [(ngModel)]="user.provinciaUsuario">
                             </div>
 
                             <div style="width: 100%; margin-right: 10%;">
                                 <label class="title-input" for="codigoPostal"> <b>Código postal</b> <br></label>
-                                <input type="text" name="codigoPostal" id="codigoPostal" placeholder="Ej: 28320" class="visible" style="margin-top: 10px">
+                                <input type="text" name="codigoPostal" id="codigoPostal" placeholder="Ej: 28320" class="visible" style="margin-top: 10px" [(ngModel)]="user.codigoPostal">
                             </div>
                         
                         </div>

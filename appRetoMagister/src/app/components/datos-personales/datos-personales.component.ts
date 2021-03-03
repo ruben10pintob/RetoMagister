@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
+import { User } from '../../models/user-part-4';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +15,7 @@ public user: User;
   constructor(
     private _router: Router
   ) { 
-    this.user = new User('','','','','','','','','','','','','','','','');
+    this.user = new User('','','');
   }
 
   ngOnInit(): void {

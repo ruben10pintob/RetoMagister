@@ -40,7 +40,7 @@
 
                     <br>
 
-                    <select name="provincia" ngModel [(ngModel)]="user.provincia">
+                    <select name="provincia" ngModel [(ngModel)]="user.provinciaEspecializarse">
                         <option value="" disabled>Ej: Madrid</option>
                         <option *ngFor="let provincia of provincias.data" [ngValue]="provincia.provincia">
                             {{ provincia.provincia }}

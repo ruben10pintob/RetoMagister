@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
+import { User } from '../../models/user-part-1';
 import { Router } from '@angular/router';
 
 import { FirebaseServiceService } from '../../services/firebase-service.service';
@@ -21,7 +21,7 @@ export class EspecializacionComponent implements OnInit {
     private _router: Router,
     private firebaseService: FirebaseServiceService,
   ) { 
-    this.user = new User('','','','','','','','','','','','','','','','');
+    this.user = new User('','','');
     this.ramas = { count: 0, data: [] };
     this.provincias = { count: 0, data: [] }
   }

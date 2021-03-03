@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
+import { User } from '../../models/user-part-3';
 import { Router } from '@angular/router';
 
 import { FirebaseServiceService } from '../../services/firebase-service.service'
@@ -20,7 +20,7 @@ export class TarifaComponent implements OnInit {
     private firebaseService: FirebaseServiceService,
     private _router: Router,
   ) { 
-    this.user = new User('','','','','','','','','','','','','','','','');
+    this.user = new User('');
     this.tarifas = { count: 0, data: [] };
   }
 

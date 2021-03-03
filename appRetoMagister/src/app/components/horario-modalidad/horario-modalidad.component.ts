@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user';
+import { User } from '../../models/user-part-2';
 import { Router } from '@angular/router';
 
 import { FirebaseServiceService } from '../../services/firebase-service.service';
@@ -22,7 +22,7 @@ export class HorarioModalidadComponent implements OnInit {
     private firebaseService: FirebaseServiceService,
     
   ) { 
-    this.user = new User('','','','','','','','','','','','','','','','');
+    this.user = new User('','');
     this.modalidades = { count: 0, data: [] };
     this.horarios = { count: 0, data: [] };
   }
