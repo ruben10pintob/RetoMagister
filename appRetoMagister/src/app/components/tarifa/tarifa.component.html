@@ -16,16 +16,16 @@
 
             <div class="container-section-form">
 
-                <div style="width: 100%; margin-left: 10%;">
+                <div class="row-form">
 
                     <label class="title-input" for="horario"> <b>Tarifa</b> <br>
                         <span>(Seleccione una opcion)</span>
                     </label>
 
-                    <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 10px;">
+                    <div class="row-form-1-columns">
 
                         <div *ngFor="let tarifa of tarifas.data" [ngValue]="tarifa.tarifa"
-                            style="width: 100%; margin-right: 10%; margin-top: 10px">
+                            class="margin-top-10">
                             <input type="radio" name="tarifa" id="{{tarifa.tarifa}}" value="{{tarifa.tarifa}}" class="visible" [(ngModel)]="user.tarifa">
                             <label for="{{tarifa.tarifa}}">{{tarifa.tarifa}}</label>
                         </div>
@@ -36,7 +36,7 @@
 
             </div>
 
-            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 30px;">
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center margin-top-button-submit">
             <a href="#" class="btn-home btn-back text-center">Volver atras</a>
 
         </form>

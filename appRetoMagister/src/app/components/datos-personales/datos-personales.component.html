@@ -1,11 +1,11 @@
 <div class="container-component">
 
-    <div class="container-component-left"> 
+    <div class="container-component-left">
         <app-aside [linkActive]="'Datos personales'"></app-aside>
     </div>
-    
+
     <div class="container-component-right">
-        
+
         <div class="text-right"><i class="fas fa-bars icon-menu-aside-right"></i></div>
 
         <div class="title-component-right">
@@ -16,16 +16,14 @@
 
             <div class="container-section-form">
 
-                <div style="width: 100%; margin-left: 10%;">
+                <div class="row-form">
 
-                    <label class="title-input" for="modalidad"> <b>Nombre completo</b> <br>
-                        
-                    </label>
+                    <div class="row-form-1-columns">
 
-                    <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 10px;">
-
-                        <div style="width: 100%; margin-right: 10%; margin-top: 10px">
-                            <input type="text" name="nombre" id="nombre" placeholder="Ej: Camila Pérez Sánchez" class="visible" [(ngModel)]="user.nombre">
+                        <div>
+                            <label class="title-input" for="modalidad"> <b>Nombre completo</b> <br></label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Ej: Camila Pérez Sánchez"
+                                class="margin-top-10 visible input-datos" [(ngModel)]="user.nombre">
                         </div>
 
                     </div>
@@ -36,40 +34,39 @@
 
             <div class="container-section-form">
 
-                <div class="container-section-form">
+                <div class="row-form">
 
-                    <div style="width: 100%; margin-left: 10%;">
-    
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; margin-top: 10px;">
+                    <div class="row-form-3-columns">
 
-                            <div style="width: 100%; margin-right: 10%;">
-                                <label class="title-input" for="dni"> <b>DNI-NIE</b> <br></label>
-                                <input type="text" name="dni" id="dni" placeholder="Ej: 51823366M" class="visible" style="margin-top: 10px" [(ngModel)]="user.DNI">
-                            </div>
-
-                            <div style="width: 100%;">
-                                <label class="title-input" for="movil"> <b>Móvil</b> <br></label>
-                                <input type="text" name="movil" id="movil" placeholder="Ej: 613266378" class="visible" style="margin-top: 10px" [(ngModel)]="user.movil">
-                            </div>
-
-                            <div style="width: 100%; margin-right: 10%;">
-                                <label class="title-input" for="email"> <b>Email</b> <br></label>
-                                <input type="text" name="email" id="email" placeholder="Ej: camila@gmail.com" class="visible" style="margin-top: 10px" [(ngModel)]="user.email">
-                            </div>
-                        
+                        <div class="margin-top-10">
+                            <label class="title-input" for="dni"> <b>DNI-NIE</b> <br></label>
+                            <input type="text" name="dni" id="dni" placeholder="Ej: 51823366M"
+                                class="margin-top-10 visible input-datos" [(ngModel)]="user.DNI">
                         </div>
-    
+
+                        <div class="margin-top-10">
+                            <label class="title-input" for="movil"> <b>Móvil</b> <br></label>
+                            <input type="text" name="movil" id="movil" placeholder="Ej: 613266378"
+                                class="margin-top-10 visible input-datos" [(ngModel)]="user.movil">
+                        </div>
+
+                        <div class="margin-top-10">
+                            <label class="title-input" for="email"> <b>Email</b> <br></label>
+                            <input type="text" name="email" id="email" placeholder="Ej: camila@gmail.com"
+                                class="margin-top-10 visible input-datos" [(ngModel)]="user.email">
+                        </div>
+
                     </div>
-    
+
                 </div>
 
             </div>
 
-            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 30px;">
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center margin-top-button-submit">
             <a href="#" class="btn-home btn-back text-center">Volver atras</a>
 
         </form>
 
-    </div>     
-    
+    </div>
+
 </div>

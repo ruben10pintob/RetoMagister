@@ -5,7 +5,7 @@
     </div>
 
     <div class="container-component-right">
-        
+
         <div class="text-right"><i class="fas fa-bars icon-menu-aside-right"></i></div>
 
         <div class="title-component-right">
@@ -16,36 +16,41 @@
 
             <div class="container-section-form">
 
-                <div style="width: 40%; margin-left: 10%;">
+                <div class="row-form">
 
-                    <label class="title-input" for="rama"> <b>Rama</b> <br>
-                        <span>(Seleccione una opcion)</span>
-                    </label>
+                    <div class="row-form-2-columns">
 
-                    <br>
+                        <div>
+                            <label class="title-input" for="rama"> <b>Rama</b> <br>
+                                <span>(Seleccione una opcion)</span>
+                            </label>
 
-                    <select name="rama" ngModel [(ngModel)]="user.rama">
-                        <option value="" disabled selected>Ej: Maestros - Audición y lenguage</option>
-                        <option *ngFor="let rama of ramas.data" [ngValue]="rama.rama">
-                            {{ rama.rama }}
-                    </select>
+                            <br>
 
-                </div>
+                            <select name="rama" ngModel [(ngModel)]="user.rama">
+                                <option value="" disabled selected>Ej: Maestros - Audición y lenguage</option>
+                                <option *ngFor="let rama of ramas.data" [ngValue]="rama.rama">
+                                    {{ rama.rama }}
+                            </select>
+                        </div>
 
-                <div style="width: 40%;">
+                        <div>
+                            <label class="title-input" for="provincia"> <b>Provincia</b> <br>
+                                <span>(Seleccione una opcion)</span>
+                            </label>
 
-                    <label class="title-input" for="provincia"> <b>Provincia</b> <br>
-                        <span>(Seleccione una opcion)</span>
-                    </label>
+                            <br>
 
-                    <br>
+                            <select name="provincia" ngModel [(ngModel)]="user.provinciaEspecializarse">
+                                <option value="" disabled>Ej: Madrid</option>
+                                <option *ngFor="let provincia of provincias.data" [ngValue]="provincia.provincia">
+                                    {{ provincia.provincia }}
+                                </option>
+                            </select>
 
-                    <select name="provincia" ngModel [(ngModel)]="user.provinciaEspecializarse">
-                        <option value="" disabled>Ej: Madrid</option>
-                        <option *ngFor="let provincia of provincias.data" [ngValue]="provincia.provincia">
-                            {{ provincia.provincia }}
-                        </option>
-                    </select>
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -53,22 +58,26 @@
 
             <div class="container-section-form">
 
-                <div style="width: 80%; margin-top: 40px; margin-left: 10%;">
+                <div class="row-form margin-top-10">
 
-                    <label class="title-input"> <b>¿Has sido alumn@ de Magister?</b> <br>
-                        <span class="conditions"> <b>Consulta las condiciones <i class="fas fa-arrow-right"></i></b></span>
-                    </label> 
+                    <label class="title-input margin-top-10"> <b>¿Has sido alumn@ de Magister?</b> <br>
+                        <span class="conditions"> <b>Consulta las condiciones <i
+                                    class="fas fa-arrow-right"></i></b></span>
+                    </label>
 
                     <br>
 
                     <div class="options">
-                        <input type="radio" name="exalumno" id="exalumno-no" value="No" class="visible" [(ngModel)]="user.exalumno">
+                        <input type="radio" name="exalumno" id="exalumno-no" value="No" class="visible"
+                            [(ngModel)]="user.exalumno">
                         <label for="exalumno-no">No</label>
 
-                        <input type="radio" name="exalumno" id="exalumno-si" value="Si" class="visible"[(ngModel)]="user.exalumno">
+                        <input type="radio" name="exalumno" id="exalumno-si" value="Si" class="visible"
+                            [(ngModel)]="user.exalumno">
                         <label for="exalumno-si">Sí</label>
 
-                        <input type="radio" name="exalumno" id="exalumno-si-2017" value="Si, despues de 2017" class="visible" [(ngModel)]="user.exalumno">
+                        <input type="radio" name="exalumno" id="exalumno-si-2017" value="Si, despues de 2017"
+                            class="visible" [(ngModel)]="user.exalumno">
                         <label for="exalumno-si-2017">Sí, después de 2017</label>
                     </div>
 
@@ -78,26 +87,26 @@
 
             <div class="container-section-form">
 
-                <div style="width: 80%; margin-top: 40px; margin-left: 10%;">
+                <div class="row-form margin-top-10">
 
-                <label class="title-input"> <b>Entrega de material</b> <br>
-                    <span class="conditions"><b>Consulta las condiciones <i class="fas fa-arrow-right"></i></b></span>
-                </label>
-                
-                <br>
+                    <label class="title-input"> <b>Entrega de material</b> <br>
+                        <span class="conditions"><b>Consulta las condiciones <i
+                                    class="fas fa-arrow-right"></i></b></span>
+                    </label>
 
-                <input type="radio" name="material" id="material" value="Mes a mes" checked>
-                <label for="material" class="btn-default">Mes a mes</label>
+                    <br>
+
+                    <input type="radio" name="material" id="material" value="Mes a mes" checked>
+                    <label for="material" class="btn-default">Mes a mes</label>
 
                 </div>
 
             </div>
 
-            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 40px;">
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center margin-top-button-submit">
 
         </form>
 
     </div>
 
 </div>
-

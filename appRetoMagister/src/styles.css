@@ -222,6 +222,47 @@ a {
         font-size: 18px;
     }
 
+    .title-component-right h2{
+        font-size: 30px;
+    }
+
+    .title-input {
+        font-size: 24px;
+    }
+
+    .title-input span {
+        font-size: 20px;
+    }
+
+    .container-section-form select {
+        font-size: 14px !important;
+        width: 70% !important;
+    }
+
+    input[type=radio]+label, 
+    input[type=text],
+    input[type=checkbox] {
+        font-size: 14px !important;;
+    }
+
+    .row-form-3-columns {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        width: 100%; 
+        margin-top: 10px;
+    }
+
+    .btn-next {
+        font-size: 14px;
+    }
+
+    .btn-back {
+        font-size: 14px;
+    }
+
+    .acept-conditions {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 756px) {
@@ -241,6 +282,45 @@ a {
         font-size: 18px;
     }
 
+    .icon-menu-aside-right {
+        font-size: 40px !important;
+    }
+
+    .title-component-right h2{
+        font-size: 27px;
+    }
+
+    .title-input {
+        font-size: 21px;
+    }
+
+    .title-input span {
+        font-size: 17px;
+    }
+
+    .container-section-form select {
+        font-size: 12px !important;
+        width: 60% !important;
+    }
+
+    input[type=radio]+label, 
+    input[type=text],
+    input[type=checkbox] {
+        font-size: 12px !important;;
+    }
+
+    .btn-next {
+        font-size: 12px;
+    }
+
+    .btn-back {
+        font-size: 12px;
+    }
+
+    .acept-conditions {
+        font-size: 12px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -254,6 +334,45 @@ a {
         margin-left: 16px;
         margin-top: 45px;
         font-size: 18px;
+    }
+
+    .icon-menu-aside-right {
+        font-size: 30px !important;
+    }
+
+    .title-component-right h2{
+        font-size: 22px;
+    }
+
+    .title-input {
+        font-size: 15px;
+    }
+
+    .title-input span {
+        font-size: 13px;
+    }
+
+    .container-section-form select {
+        font-size: 12px !important;
+        width: 60% !important;
+    }
+
+    input[type=radio]+label, 
+    input[type=text],
+    input[type=checkbox] {
+        padding: 7px 17px !important;
+        font-size: 12px !important;
+        margin-top: 10px;
+    }
+
+    .btn-next {
+        font-size: 12px;
+        width: 30% !important;
+    }
+
+    .btn-back {
+        font-size: 12px;
+        width: 30% !important;
     }
     
 }
@@ -269,6 +388,20 @@ a {
         margin-left: 8px;
         margin-top: 25px;
         font-size: 12px;
+    }
+
+    .row-form-3-columns {
+        display: grid; 
+        grid-template-columns: repeat(1, 1fr) !important; 
+        width: 100%; 
+        margin-top: 10px;
+    }
+
+    .row-form-2-columns {
+        display: grid; 
+        grid-template-columns: repeat(1, 1fr) !important; 
+        width: 100%; 
+        margin-top: 10px;
     }
     
 }
@@ -324,7 +457,7 @@ a {
     color: #193868;
     line-height: 1.3;
     padding: 8px;
-    width: 400px;
+    width: 80%;
     max-width: 100%; 
     box-sizing: border-box;
     border: 1px solid #193868;
@@ -334,6 +467,10 @@ a {
 
 .container-section-form .options {
     margin-top: 10px;
+}
+
+.options input {
+    width: 20% !important;
 }
 
 .conditions {
@@ -367,7 +504,7 @@ input[type=text].visible:checked{
 
 .btn-next {
     display: flex;
-    width: 200px;
+    width: 20%;
     justify-content: center;
     align-items: center;
     margin-left: 42%;
@@ -384,13 +521,70 @@ input[type=text].visible:checked{
     color: #fff;
 }
 
-@media screen and (max-width: 682px) {
-    app-especializacion,
-    app-datos-personales,
-    app-direccion,
-    app-formas-pago,
-    app-horario-modalidad,
-    app-tarifa {
+.row-form {
+    width: 100%; 
+    margin-left: 10%;
+}
+
+.row-form-1-columns {
+    display: grid; 
+    grid-template-columns: repeat(1, 1fr); 
+    width: 100%; 
+    margin-top: 10px;
+}
+
+.row-form-2-columns {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    width: 100%; 
+    margin-top: 10px;
+}
+
+.row-form-3-columns {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    width: 100%; 
+    margin-top: 10px;
+}
+
+.row-form-1-columns div {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-top-button-submit {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1049px) {
+    app-horario-modalidad {
         display: flex;
     }
+}
+
+@media screen and (max-width: 986px) {
+    app-direccion {
+        display: flex;
+    }
+}
+
+.input-datos,
+.input-direccion {
+    width: 60%;
 }

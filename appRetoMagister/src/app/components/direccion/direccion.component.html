@@ -1,11 +1,11 @@
 <div class="container-component">
 
-    <div class="container-component-left"> 
+    <div class="container-component-left">
         <app-aside [linkActive]="'Dirección'"></app-aside>
     </div>
-    
+
     <div class="container-component-right">
-        
+
         <div class="text-right"><i class="fas fa-bars icon-menu-aside-right"></i></div>
 
         <div class="title-component-right">
@@ -16,19 +16,20 @@
 
             <div class="container-section-form">
 
-                <div style="width: 100%; margin-left: 10%;">
+                <div class="row-form">
 
                     <label class="title-input" for="modalidad"> <b>Comunidad de examen</b> <br>
                         <span>(Seleccione una opcion)</span>
                     </label>
 
-                    <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 10px;">
+                    <div class="row-form-1-columns">
 
                         <select name="comunidad" ngModel [(ngModel)]="user.comunidadExamen">
                             <option value="" disabled>Ej: Madrid</option>
                             <option *ngFor="let comunidad of comunidades.data" [ngValue]="comunidad.comunidad">
                                 {{ comunidad.comunidad }}
                             </option>
+
                         </select>
 
                     </div>
@@ -39,85 +40,84 @@
 
             <div class="container-section-form">
 
-                <div style="width: 100%; margin-left: 10%;">
-    
-                    <div style="display: grid; grid-template-columns: repeat(1, 1fr); width: 100%; margin-top: 10px;">
+                <div class="row-form">
 
-                        <div style="width: 100%; margin-right: 10%;">
+                    <div class="row-form-1-columns">
+
+                        <div>
                             <label class="title-input" for="direccion"> <b>Dirección</b> <br></label>
-                            <input type="text" name="direccion" id="direccion" placeholder="Ej: Calle Ramiro de Matxu, 10, 4D" class="visible" style="margin-top: 10px" [(ngModel)]="user.direccion">
+                            <input type="text" name="direccion" id="direccion"
+                                placeholder="Ej: Calle Ramiro de Matxu, 10, 4D" class="margin-top-10 visible input-direccion"
+                                [(ngModel)]="user.direccion">
                         </div>
-                        
+
                     </div>
-    
+
                 </div>
 
             </div>
 
             <div class="container-section-form">
 
-                <div class="container-section-form">
+                <div class="row-form">
 
-                    <div style="width: 100%; margin-left: 10%;">
-    
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; margin-top: 10px;">
+                    <div class="row-form-3-columns">
 
-                            <div style="width: 100%; margin-right: 10%;">
-                                <label class="title-input" for="localidad"> <b>Localidad</b> <br></label>
-                                <input type="text" name="localidad" id="localidad" placeholder="Ej: Madrid" class="visible" style="margin-top: 10px" [(ngModel)]="user.localidad">
-                            </div>
-
-                            <div style="width: 100%;">
-                                <label class="title-input" for="provincia"> <b>Provincia</b> <br></label>
-                                <input type="text" name="provincia" id="provincia" placeholder="Ej: Madrid" class="visible" style="margin-top: 10px" [(ngModel)]="user.provinciaUsuario">
-                            </div>
-
-                            <div style="width: 100%; margin-right: 10%;">
-                                <label class="title-input" for="codigoPostal"> <b>Código postal</b> <br></label>
-                                <input type="text" name="codigoPostal" id="codigoPostal" placeholder="Ej: 28320" class="visible" style="margin-top: 10px" [(ngModel)]="user.codigoPostal">
-                            </div>
-                        
+                        <div class="margin-top-10">
+                            <label class="title-input" for="localidad"> <b>Localidad</b> <br></label>
+                            <input type="text" name="localidad" id="localidad" placeholder="Ej: Madrid"
+                                class="margin-top-10 visible input-direccion" [(ngModel)]="user.localidad">
                         </div>
-    
+
+                        <div class="margin-top-10">
+                            <label class="title-input" for="provincia"> <b>Provincia</b> <br></label>
+                            <input type="text" name="provincia" id="provincia" placeholder="Ej: Madrid"
+                                class="margin-top-10 visible input-direccion" [(ngModel)]="user.provinciaUsuario">
+                        </div>
+
+                        <div class="margin-top-10">
+                            <label class="title-input" for="codigoPostal"> <b>Código postal</b> <br></label>
+                            <input type="text" name="codigoPostal" id="codigoPostal" placeholder="Ej: 28320"
+                                class="margin-top-10 visible input-direccion" [(ngModel)]="user.codigoPostal">
+                        </div>
+
                     </div>
-    
+
                 </div>
 
             </div>
 
             <div class="container-section-form">
 
-                <div class="container-section-form">
+                <div class="row-form">
 
-                    <div style="width: 100%; margin-left: 10%;">
-    
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); width: 100%; margin-top: 10px;">
+                    <div class="row-form-2-columns acept-conditions">
 
-                            <div style="width: 100%; margin-right: 10%; display: flex">
-                                <input type="checkbox" name="informacion-legal" class="visible" ng-required="informacion-legal" style="margin-top: 5px">
-                                <label class="title-input" for="informacion-legal"> <b>Acepto la <a href="#">información legal</a> </b> <br></label>
-                            </div>
-
-                            <div style="width: 100%; display: flex;">
-                                <input type="checkbox" name="proteccion-datos" class="visible" required style="margin-top: 5px">
-                                <label class="title-input" for="proteccion-datos"> <b>Acepto la <a href="#">protección dedatos</a> </b> <br></label>
-
-                            </div>
-                        
+                        <div>
+                            <input type="checkbox" name="informacion-legal" class="margin-top-5 visible">
+                            <label class="title-input" for="informacion-legal"> <b>Acepto la <a href="#">información
+                                        legal</a> </b> <br></label>
                         </div>
-    
+
+                        <div>
+                            <input type="checkbox" name="proteccion-datos" class="margin-top-5 visible">
+                            <label class="title-input" for="proteccion-datos"> <b>Acepto la <a href="#">protección
+                                        dedatos</a> </b> <br></label>
+
+                        </div>
+
                     </div>
-    
+
                 </div>
 
             </div>
 
 
-            <input type="submit" value="Siguiente" class="btn-next btn-success text-center" style="margin-top: 30px;">
+            <input type="submit" value="Siguiente" class="btn-next btn-success text-center margin-top-button-submit">
             <a href="#" class="btn-home btn-back text-center">Volver atras</a>
 
         </form>
 
-    </div>       
-    
+    </div>
+
 </div>
